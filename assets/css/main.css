@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("fontawesome-all.min.css");
+
+/*Generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ScrollBar */
+body::-webkit-scrollbar{
+    width: 7px;
+    background: #fff;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #ABD1C6;
+    border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: #918c77;
+}
+
+body {
+    background: #000;
+    min-height: 100vh;
+}
+
+
+
+/* Navbar */
+
+/* Responsive */
+
+.toggle-menu {
+    position: absolute;
+    right: 1.5rem;
+    cursor: pointer;
+    filter: invert(1);
+    width: 40px;
+    z-index: 1;
+  }
+
+header.sticky .toggle-menu{
+    position: absolute;
+    right: 1.5rem;
+    cursor: pointer;
+    filter: none;
+    width: 40px;
+    z-index: 1;
+}
+
+  @media screen and (min-width: 768px) {
+    .toggle-menu {
+      display: none;
+    }
+  }
+
+  .main-menu {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    transform: translateY(-150%);
+  }
+
+  .main-menu--show {
+    transform: translateY(0);
+  }
+
+  .toggle-menu__checkbox {
+    display: none;
+  }
+  
+  .toggle-menu__checkbox:checked + .main-menu {
+    transform: translateY(0);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .main-menu {
+      flex-direction: row;
+      transform: translateY(0);
+    }
+ /*Aqui*/
+  }
+  
+  .main-menu__item {
+    padding: 5px;
+  }
+  
+
+
+/* Transparante */
+    header{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        padding: 40px 20px; /*Cambios 1*/
+        z-index: 1;
+    }
+
+    header .logo{
+        position: relative;
+        height: 100px;
+        width: 175px;
+        animation: blanco 2s forwards;
+    }
+
+    @keyframes blanco{
+        form{
+            filter: none;
+        }
+        to{
+            filter:contrast(0) brightness(10);
+        }
+    }
+
+    header ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header ul li{
+        position: relative;
+        list-style: none;
+    }
+
+    header ul li a{
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color:#fff;
+        letter-spacing: 2px;
+        font-weight:500px;
+        transition: 0.6s;
+    }
+        /* Dropdown en transparante*/
+
+        header li a:hover, header.dropdown:hover .dropbtn {
+            color: rgb(255 255 255 /.7);
+            filter: drop-shadow(2px 2px 1px rgba(0 0 0 /.9));
+            font-weight: bold;
+        }
+
+        li.dropdown {
+        display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255,255,255,0.2);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        header .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        /*.dropdown-content a:hover {background-color: ;}*/
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+/* Sticky */
+
+    header.sticky{
+        margin: 0;
+        padding: 0px 20px; /*Cambios 1*/
+        background-color: rgb(220, 243, 239);
+    }
+
+
+    header.sticky ul li a{
+        color: #000;
+    }
+
+    header.sticky .logo{
+        position: relative;
+        height: 80px;
+        width: 155px;
+        animation: colores 2s forwards;
+    }
+
+    @keyframes colores{
+        form{
+            filter:contrast(0) brightness(10);
+        }
+        to{
+            filter:none; /*Cambio 2*/
+        }
+    }
+
+        /*Dropdown en blanco*/
+
+        header.sticky li a:hover, header.sticky.dropdown:hover .dropbtn {
+            color:#05236E;
+            font-weight: bold;
+            filter: none;
+        }
+        header.sticky .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        header.sticky .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(220, 243, 239);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+/* Banner */
+
+    .banner-conte-text{ /*Aqui*/
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .banner::before{
+        position:absolute;
+        content:"";
+        inset: 0;
+        background:url(/images/bkgfull/ecopoint.mx\ \ Propuesta\ George.png);
+        /*background: url(/video/mixkit-close-up-of-a-solar-panel-in-rotation-32398-medium.gif);*/
+        background-size: cover;
+        filter:blur(5px) brightness(70%) saturate(90%);
+    }
+
+    .banner-text{
+        position:relative;
+        color:#fff;
+        font-size: 25px;
+        padding: 2rem;
+    }
+
+    .text-i{
+        text-align: right;
+        border-right: 4px solid rgba(255 255 255 /.5);
+        /*Aqui*/
+    }
+
+/* Main */
+    .main{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(220, 243, 239)
+    }
