@@ -31,7 +31,7 @@ body {
 
 /* Navbar */
 
-/* Responsive */
+/* Menu sandwich */
 
 .toggle-menu {
     position: absolute;
@@ -51,12 +51,6 @@ header.sticky .toggle-menu{
     z-index: 1;
 }
 
-  @media screen and (min-width: 768px) {
-    .toggle-menu {
-      display: none;
-    }
-  }
-
   .main-menu {
     list-style: none;
     margin-top: 0;
@@ -66,7 +60,7 @@ header.sticky .toggle-menu{
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s;
-    transform: translateY(-150%);
+    transform: translateX(150%);
   }
 
   .main-menu--show {
@@ -79,14 +73,6 @@ header.sticky .toggle-menu{
   
   .toggle-menu__checkbox:checked + .main-menu {
     transform: translateY(0);
-  }
-  
-  @media screen and (min-width: 768px) {
-    .main-menu {
-      flex-direction: row;
-      transform: translateY(0);
-    }
- /*Aqui*/
   }
   
   .main-menu__item {
@@ -163,7 +149,7 @@ header.sticky .toggle-menu{
             background-color: rgba(255,255,255,0.2);
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 2;
+            z-index: 1;
         }
 
         header .dropdown-content a {
@@ -235,10 +221,10 @@ header.sticky .toggle-menu{
 
 /* Banner */
 
-    .banner-conte-text{ /*Aqui*/
+    .banner-conte-text{
         position: relative;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
@@ -250,7 +236,6 @@ header.sticky .toggle-menu{
         content:"";
         inset: 0;
         background:url(/images/bkgfull/ecopoint.mx\ \ Propuesta\ George.png);
-        /*background: url(/video/mixkit-close-up-of-a-solar-panel-in-rotation-32398-medium.gif);*/
         background-size: cover;
         filter:blur(5px) brightness(70%) saturate(90%);
     }
@@ -263,10 +248,41 @@ header.sticky .toggle-menu{
     }
 
     .text-i{
+        text-align: center;
+        border-bottom: 4px solid rgba(255 255 255 /.5);
+    }
+
+    .text-d{
+        text-align: center;
+    }
+
+/* Responsive - media screen */
+
+@media screen and (min-width: 768px){
+    .toggle-menu {
+      display: none;
+    }
+
+    .main-menu {
+    flex-direction: row;
+    transform: translateY(0);
+    }
+
+    .banner-conte-text{
+        flex-direction: row;
+    }
+
+    .text-i{
         text-align: right;
         border-right: 4px solid rgba(255 255 255 /.5);
-        /*Aqui*/
+        border-bottom: 0;
+    }   
+    
+    .text-d{
+        text-align: left;
     }
+
+}
 
 /* Main */
     .main{
