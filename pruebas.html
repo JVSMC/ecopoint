@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,61 +10,106 @@
 <body>
 
     <header>
-        
         <nav>
-
             <input type="checkbox" id="ckbox">
             <label for="ckbox" class="drawer">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </label>
 
-            <h1>Nintendo</h1>
+            <a href="#banner">
+                <img class = "logo" href = "#" src="images/www.ecopoint.mx-logo-paneles-solares-energia.png" alt="ecopoint-paneles-solares">
+            </a>
 
             <ul class="menu-box">
-
                 <div class="drop-down-menu">
-                    <button class="drop-down-button">Inicio</button>
+                    <button class="drop-down-button"> <a href="#banner">Inicio</a></button>
                 </div>
 
                 <div class="drop-down-menu">
-                    <button class="drop-down-button">Consolas actuales
+                    <button class="drop-down-button">Paneles solares
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="drop-down-menu-content">
-                        <a href="#">Switch</a>
-                        <a href="#">Wii U</a>
-                        <a href="#">Switch LITE</a>
-                        <a href="#">3DS</a>
+                        <a href="#">ecohogar</a>
+                        <a href="#">econegocio</a>
+                        <a href="#">ecoindustria</a>
+                        <a href="#">ecogobierno</a>
                     </div>
                 </div>
 
                 <div class="drop-down-menu">
-                    <button class="drop-down-button">Consolas mini
+                    <button class="drop-down-button">Calentadores
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="drop-down-menu-content">
-                        <a href="#">SNES Classic Mini</a>
-                        <a href="#">NES Classic Mini</a>
+                        <a href="#">Para el hogar</a>
+                        <a href="#">Ser mayorista</a>
+                        <a href="#">econegocio</a>
                     </div>
                 </div>
-
                 <div class="drop-down-menu">
-                    <button class="drop-down-button">Consolas Antiguas
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="drop-down-menu-content">
-                        <a href="#">Wii</a>
-                        <a href="#">gameCube</a>                        
-                        <a href="#">N64</a>                        
-                        <a href="#">SNES</a>                        
-                        <a href="#">NES</a>
-                    </div>
+                    <button class="drop-down-button"><a href = "not_exist.html">Nosotros</a></button>
                 </div>
-
-
+                <div class="drop-down-menu">
+                    <button class="drop-down-button"><a href = "not_exist.html">Blog</a></button>
+                </div>
+                <div class="drop-down-menu">
+                    <button class="drop-down-button"><a href = "not_exist.html">Ebook</a></button>
+                </div>
+                <div class="drop-down-menu">
+                    <button class="drop-down-button"><a href = "not_exist.html">Contacto</a></button>
+                </div>
             </ul>
         </nav>
     </header>
-    
+    <div class="banner" id = "banner">
+        <div class = "banner-conte-text">
+            <div class = "banner-text text-i">
+                <h2>Bienvenido al 
+                    <br>futuro de las</br>
+                </h2>
+            </div>
+            <div class = "banner-text text-d">
+                <h1>Energías 
+                    <br>Renovables</br>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+<!-- Main -->	
+    <div class="main" id = "Quienes">
+        <div>
+            <div>
+                <h3>Titul</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, sequi? Nisi maxime repudiandae blanditiis excepturi tempore natus nam a asperiores?	</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h3>Titul</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, sequi? Nisi maxime repudiandae blanditiis excepturi tempore natus nam a asperiores?	</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h3>Titul</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, sequi? Nisi maxime repudiandae blanditiis excepturi tempore natus nam a asperiores?	</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <!-- Scripts -->
+    <script type="text/javascript">
+        window.addEventListener("scroll", function()
+        {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.pageYOffset > 0);
+        }
+        )
+    </script>
+    <script src="https://kit.fontawesome.com/5f286d029f.js" crossorigin="anonymous"></script>
 </body>
 </html>

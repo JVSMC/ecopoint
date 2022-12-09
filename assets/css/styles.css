@@ -1,9 +1,9 @@
 :root{    
   --primary:#e60012;
-  --secundary:#46659b;
+  --secundary:rgb(255 255 255 /.2);
   --background:#35495e;
   --black-text:rgb(61, 61, 61);
-  --white-text:#ffffff;
+  --white-text:#fff;
 }
 
 *{
@@ -17,29 +17,102 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  min-height: 100vh;
 }
 
+
+/* Navbar */
+  /*-> Logo*/
+    .drawer{
+      font-size: 1rem;
+      color: var(--white-text);
+      float: left;
+      cursor: pointer;
+      display: none;
+      margin: auto 1rem;
+    }
+
+    #ckbox{
+      display: none;
+    }
+    nav .logo{
+      position: relative;
+      height: 100px;
+      width: 175px;
+      animation: blanco 2s forwards;
+    }
+
+    @keyframes blanco{
+      form{
+          filter: none;
+      }
+      to{
+          filter:contrast(0) brightness(10);
+      }
+    }
+
+    /* Sticky */
+
+    header.sticky .drawer{
+      color:var(--black-text);
+    }
+  
+    header.sticky nav{
+      margin: 0;
+      padding: 0px 20px; /*Cambios 1*/
+      background-color: rgb(220, 243, 239);
+    }
+
+    header.sticky .drop-down-menu .drop-down-button,
+    header.sticky .drop-down-menu .drop-down-button a{
+        color: var(--black-text);
+    }
+
+    header.sticky .logo{
+        position: relative;
+        height: 80px;
+        width: 155px;
+        animation: colores 4s forwards;
+    }
+
+    @keyframes colores{
+      form{
+          filter:contrast(0) brightness(10);
+      }
+      to{
+          filter:none; /*Cambio 2*/
+      }
+  }
+
+
+
+ /*Logo <-*/   
+
 nav{
-  background-color: var(--primary);
-  height: 10vh;
+  /*height: 10vh;*/
+  position:fixed;
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  transition: 0.6s;
+  padding: 40px 20px; /*Cambios 1*/
+
 }
 
-header h1{
-  color: var(--white-text);
-  font-size: 2rem;
-  letter-spacing: .7rem;
-}
-
-.drop-down-menu .drop-down-button{
+.drop-down-menu .drop-down-button {
   font-size: 1.2rem;
   outline: none;
   color: var(--white-text);
   padding: 1rem 1rem;
   background-color: inherit;
+}
+
+nav ul div button a{
+  text-decoration: none;
+  color: var(--white-text);
 }
 
 .drop-down-menu-content{
@@ -76,20 +149,55 @@ nav ul{
   display: flex;
 }
 
-.drawer{
-  font-size: 1rem;
-  color: var(--white-text);
-  float: left;
-  cursor: pointer;
-  display: none;
-  margin-left: 1rem;
-  border: solid .1rem var(--white-text) ;
-  padding: .2rem;
-  border-radius: .1rem;
+
+
+
+/* Banner */
+.banner-conte-text{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
 
-#ckbox{
-  display: none;
+.banner::before{
+  position:absolute;
+  content:"";
+  inset: 0;
+  background:url(/images/bkgfull/ecopoint.mx\ \ Propuesta\ George.png);
+  background-size: cover;
+  filter:blur(5px) brightness(70%) saturate(90%);
+}
+
+.banner-text{
+  position:relative;
+  color:#fff;
+  font-size: 25px;
+  padding: 2rem;
+}
+
+.text-i{
+  text-align: right;
+  border-right: 4px solid rgba(255 255 255 /.5);
+  border-bottom: 0;
+}   
+
+.text-d{
+  text-align: left;
+}
+
+/* Main */
+.main{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(220, 243, 239)
 }
 
 /*media query*/
@@ -100,22 +208,17 @@ nav ul{
   }
 
   .drawer{
-      display: block;
+    display: inline;
   }
 
   .drop-down-menu-content{
       width: 100%;
   }
 
-  nav h1{
-      margin-left: 1rem;
-  }
-
   ul{
       position: fixed;
-      width: 50%;
+      width: 30%;
       height: 100vh;
-      background-color: var(--background);
       top: 10vh;
       left: -100%;
       text-align: left;
@@ -127,5 +230,20 @@ nav ul{
 
   #ckbox:checked ~ .menu-box{
       left: 0;
+      margin-top: 2rem;
+  }
+
+  .banner-conte-text{
+    flex-direction: column;
+  }
+
+  .text-i{
+    text-align: center;
+    border-bottom: 4px solid rgba(255 255 255 /.5);
+    border-right: 0;
+  }
+
+  .text-d{
+      text-align: center;
   }
 }
