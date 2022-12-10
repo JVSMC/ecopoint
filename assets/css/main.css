@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&family=Poppins:wght@100;200;300;400&display=swap');
 @import url("fontawesome-all.min.css");
 
 :root{    
@@ -13,7 +14,7 @@
     --tertiary:#00C2CB;
     --four:rgb(4 212 4);
     --five: rgb(0 0 0 /.7);
-    --six:rgb(4 212 4 /.8);
+    --six:rgb(4 212 4 /.6);
     --black-text:rgb(61, 61, 61);
     --white-text:#fff;
   }
@@ -27,6 +28,37 @@
     border: none;
     list-style: none;
     text-decoration: none;
+}
+.divi{
+  font-size: 20px;
+}
+
+section{
+  width: 75%;
+  margin: 2rem auto;
+  text-align: justify;
+}
+
+section h2,
+section h3{
+  text-align: center;
+  margin: 1.5rem;
+}
+
+
+ul li{
+  list-style-type: circle;
+  list-style-position: inside;
+  padding: 0;
+}
+
+.icon-img{
+  margin-top: 2rem;
+  width: 40px;
+  height: 40px;
+}
+.icon-img-conte{
+  text-align: center;
 }
 
 /* ScrollBar */
@@ -47,7 +79,26 @@ body{
     background: var(--background-black);
     min-height: 100vh;
   }
-  
+
+  /* Main */
+  .main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--background-white);
+  }
+
+  .main h2{
+    font-size: 30px;
+    color:var(--tertiary)
+  }
+
+  .main h3{
+    font-size: 25px;
+    color:var(--four)
+  }
   
 /* Navbar */
     /*-> Logo*/
@@ -63,6 +114,7 @@ body{
       #ckbox{
         display: none;
       }
+      
       nav .logo{
         position: relative;
         height: 100px;
@@ -138,7 +190,7 @@ display: none;
 position: absolute;
 background-color: var(--secondary);
 min-width: 10rem;
-box-shadow: 0 .8rem 1rem 0 rgba(0,0,00.2);
+box-shadow: 0 .8rem 1rem rgba(0,0,0.2);
 z-index: 1;
 }
 
@@ -214,7 +266,7 @@ display: flex;
   
   .banner-text{
     position:relative;
-    color:var(--background-white);
+    color:var(--white-text);
     font-size: 25px;
     padding: 2rem;
   }
@@ -229,20 +281,73 @@ display: flex;
     text-align: left;
   }
   
-  /* Main */
-  .main{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--background-white);
+/*Servicios*/
+#servicios p{
+  font-family: "IBM Plex Sans", Helvetica, sans-serif;
+}
+
+.servi{
+  display: flex;
+  margin: 3rem;
+}
+
+.servi-info{
+  margin: 0 3rem;
+}
+.servi-info h3{
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.img-servi{
+  width: 250px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
+  box-shadow: 0 .8rem 1rem rgba(0,0,0.2);
+}
+
+.d{
+  flex-direction: row-reverse;
+}
+  /*Filosofia*/
+  .nosotros-text{
+    line-height: 45px;
+    margin-bottom: 3rem;
   }
-  
+
+  .main p,
+  .main ul{
+    font-size: 20px;
+  }
+
+  .MVV{
+    display: flex;
+    margin-top: 1rem;
+    border-top: 3px solid var(--tertiary);
+  }
+
+  .MVV-conte{
+    width: 37%;
+    margin:0 1rem;
+    line-height:40px;
+  }
+  .MVV-conte-li{
+    margin:0 1rem;
+    line-height:40px;
+  }
+  .section-conte h3{
+    margin-top: .5rem;
+  }
+
   /*media query*/
   
   @media (max-width:1039px) {
+
+    /*Navbar*/
     nav{
         justify-content: flex-start;
     }
@@ -255,7 +360,7 @@ display: flex;
         width: 100%;
     }
   
-    ul{
+    .menu-box{
         position: fixed;
         width: 50%;
         height: 100vh;
@@ -322,5 +427,30 @@ display: flex;
   
     .text-d{
         text-align: center;
+    }
+
+/*Servicios*/
+
+.servi{
+  flex-direction: column;
+}
+
+.servi-info{
+  margin-top: 20px;
+}
+.servi-info h3{
+  text-align: center;
+}
+
+/*Filosofia*/
+    .MVV{
+      flex-direction: column;
+    }
+
+    .MVV-conte{
+      width: 100%;
+    }
+    .MVV-conte-li{
+      width: 100%;
     }
   }
