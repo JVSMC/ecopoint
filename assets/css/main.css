@@ -287,6 +287,10 @@ display: flex;
   font-family: "IBM Plex Sans", Helvetica, sans-serif;
 }
 
+.d{
+  flex-direction: row-reverse;
+}
+
 .servi{
   display: flex;
   margin: 3rem;
@@ -299,20 +303,59 @@ display: flex;
   text-align: left;
   padding: 0;
   margin: 0;
+  border-bottom: 2px solid var(--iden3);
 }
 
-.img-servi{
-  width: 250px;
-  height: 250px;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  box-shadow: 0 .8rem 1rem rgba(0,0,0.2);
-}
+  .img-servi{
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 .8rem 1rem rgba(0,0,0.2);
+  }
 
+  .button a{
+    text-decoration: none;
+    color:var(--black-text);
+  }
+  .button {
+    display: inline-block;
+    border-radius: 8px;
+    background-color: var(--tertiary);
+    border: none;
+    text-align: center;
+    font-size: 17px;
+    padding: 5px;
+    width: 190px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1rem auto; /*Papi*/
+  }
 
-.d{
-  flex-direction: row-reverse;
-}
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
   /*Filosofia*/
   .nosotros-text{
