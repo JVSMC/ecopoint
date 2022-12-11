@@ -28,7 +28,7 @@
 		<meta name="theme-color" content="#ffffff">
 
 	</head>
-	<body>
+	<body id ="principal">
 		<header>
 			<nav>
 				<input type="checkbox" id="ckbox">
@@ -36,13 +36,13 @@
 					<i class="fa-solid fa-bars" aria-hidden="true"></i>
 				</label>
 	
-				<a href="#banner">
+				<a href="#principal">
 					<img class = "logo" src="images/www.ecopoint.mx-logo-paneles-solares-energia.png" alt="ecopoint-paneles-solares">
 				</a>
 	
 				<ul class="menu-box">
 					<div class="drop-down-menu">
-						<button class="drop-down-button"> <a href="#banner">Inicio</a></button>
+						<a href="#banner"><button class="drop-down-button">Inicio</button></a>
 					</div>
 	
 					<div class="drop-down-menu">
@@ -68,31 +68,37 @@
 						</div>
 					</div>
 					<div class="drop-down-menu">
-						<button class="drop-down-button"><a href = "#filosofia">Nosotros</a></button>
+						<a href = "#filosofia"><button class="drop-down-button">Nosotros</button></a>
 					</div>
 					<div class="drop-down-menu">
-						<button class="drop-down-button"><a href = "https://bit.ly/blog-ecopoint">Blog</a></button>
+						<a href = "https://bit.ly/blog-ecopoint" target="_blank"><button class="drop-down-button">Blog</button></a>
 					</div>
 					<div class="drop-down-menu">
-						<button class="drop-down-button"><a href = "https://bit.ly/ebook-ecopoint">Ebook</a></button>
+						<a href = "https://bit.ly/ebook-ecopoint" target="_blank"><button class="drop-down-button">Ebook</button></a>
 					</div>
 					<div class="drop-down-menu">
-						<button class="drop-down-button"><a href = "#contacto">Contacto</a></button>
+						<a href = "#contacto"><button class="drop-down-button">Contacto</button></a>
 					</div>
 				</ul>
 			</nav>
 		</header>
 		<div class="banner" id = "banner">
 			<div class = "banner-conte-text">
-				<div class = "banner-text text-i" data-aos="zoom-in">
-					<h2>Bienvenido al 
-						<br>futuro de las</br>
-					</h2>
+				<div class = "banner-text">
+					<div class="banner-text-i">
+						<h2>Bienvenido al 
+							<br>futuro de las</br>
+						</h2>
+					</div>
+					<div class = "banner-text-d">
+						<h1>
+							Energías
+							<br>Renovables</br>
+						</h1>
+					</div>
 				</div>
-				<div class = "banner-text text-d" data-aos="zoom-in">
-					<h1>Energías 
-						<br>Renovables</br>
-					</h1>
+				<div>
+					<button class="button" style="vertical-align:middle"><a href="not_exist.html"><span>Más información</span></a></button>
 				</div>
 			</div>
 		</div>
@@ -190,26 +196,34 @@
 					<div class = "footer-form-email-social">
 						<form  class = "formulario" action="https://formsubmit.co/contacto@ecopoint.mx" method="POST">
 							<div class="inputs-email">
-								<div><input type="text" name="name" id="name" placeholder="Nombre" /></div>
-								<div><input type="email" name="email" id="email" placeholder="Correo" /></div>
-								<div><textarea name="message" id="message" placeholder="Mensaje" rows="4"></textarea></div>
+								<div><input type="text" name="Nombre" id="name" placeholder="Nombre" /></div>
+								<div><input type="email" name="Email" id="email" placeholder="Correo: example@example.com" /></div>
+								<div><input type="tel" name="Número de Teléfono" id="phonenumber" placeholder="Teléfono: +52 33 555 5555" /></div>
+								<div><textarea name="Mensaje" id="message" placeholder="Mensaje" rows="4"></textarea></div>
 								<input class = "button btnsend" type="submit" value = "Enviar Mensaje">
 								<input type="hidden" name="_captcha" value="false">
 								<input type="hidden" name="_next" value="https://ecopoint-orion.netlify.app">
+								<input type="hidden" name="_template" value="table">
 							</div>
 						</form>
 						<div class = "social-links-ecopoint">
+							<a href="https://bit.ly/Whatsapp-ecopoint"><i class="fa-brands fa-whatsapp"></i></a>
 							<a href="https://bit.ly/facebook-ecopoint"><i class="fa-brands fa-facebook-f"></i></i></a>
 							<a href="https://bit.ly/twitter-ecopoint"><i class="fa-brands fa-twitter"></i></a>
 							<a href="https://bit.ly/tiktok-ecopoint"><i class="fa-brands fa-tiktok"></i></a>
 							<a href="https://bit.ly/Instagram-ecopoint"><i class="fa-brands fa-instagram"></i></a>
 							<a href="https://bit.ly/pinteres-ecopoint"><i class="fa-brands fa-pinterest"></i></a>
 							<a href="https://bit.ly/linkedin-ecopoint"><i class="fa-brands fa-linkedin-in"></i></a>
-							<a href="https://bit.ly/Whatsapp-ecopoint"><i class="fa-brands fa-whatsapp"></i></a>
 							<a href="https://bit.ly/youtube-ecopoint"><i class="fa-brands fa-youtube"></i></a>
 						</div>
 					</div>
+					<div class = "info-ecopoint">
+						<p class = "ubi"><i class="fa-solid fa-location-pin"></i> Guadalajara, Jalisco, México</p>
+						<p><i class="fa-solid fa-phone-volume"></i> +52 332 592 1050</p>
+						<p><i class="fa-solid fa-envelope"></i> contacto@ecopoint.mx</p>
+					</div>
 				</div>
+				<p class ="copyrights"> Copyrights &copy; ECOPOINT | All Rights Reserved</p>
 			</section>
 		</footer>
 		<script src = "assets/js/main.js"></script>
