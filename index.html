@@ -7,6 +7,7 @@
 		<title>EcoPoint</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
@@ -28,7 +29,6 @@
 
 	</head>
 	<body>
-
 		<header>
 			<nav>
 				<input type="checkbox" id="ckbox">
@@ -77,19 +77,19 @@
 						<button class="drop-down-button"><a href = "https://bit.ly/ebook-ecopoint">Ebook</a></button>
 					</div>
 					<div class="drop-down-menu">
-						<button class="drop-down-button"><a href = "not_exist.html">Contacto</a></button>
+						<button class="drop-down-button"><a href = "#contacto">Contacto</a></button>
 					</div>
 				</ul>
 			</nav>
 		</header>
 		<div class="banner" id = "banner">
 			<div class = "banner-conte-text">
-				<div class = "banner-text text-i">
+				<div class = "banner-text text-i" data-aos="zoom-in">
 					<h2>Bienvenido al 
 						<br>futuro de las</br>
 					</h2>
 				</div>
-				<div class = "banner-text text-d">
+				<div class = "banner-text text-d" data-aos="zoom-in">
 					<h1>Energías 
 						<br>Renovables</br>
 					</h1>
@@ -101,7 +101,7 @@
 		<div class="main">
 			<section class="section-conte" id="servicios">
 				<h2>Nuestros servicios</h2> <!--O cambiar por productos-->
-				<div class="servi">
+				<div class="servi" data-aos="fade-right">
 					<div class ="img-conte">
 						<img src="images/pic01.jpg" alt="" class = "img-servi">
 					</div>
@@ -111,7 +111,7 @@
 						<button class="button" style="vertical-align:middle"><a href="not_exist.html"><span>Más información</span></a></button>
 					</div>
 				</div>
-				<div class="servi d">
+				<div class="servi d" data-aos="fade-left">
 					<div class="icon-img-conte">
 						<img src="images/pic02.jpg" alt="" class = "img-servi">
 					</div>
@@ -121,7 +121,7 @@
 						<button class="button" style="vertical-align:middle"><a href="not_exist.html"><span>Más información</span></a></button>
 					</div>
 				</div>
-				<div class="servi">
+				<div class="servi" data-aos="fade-right">
 					<div class="icon-img-conte">
 						<img src="images/pic03.jpg" alt="" class = "img-servi">
 					</div>
@@ -131,7 +131,7 @@
 						<button class="button" style="vertical-align:middle"><a href="not_exist.html"><span>Más información</span></a></button>
 					</div>
 				</div>
-				<div class="servi d">
+				<div class="servi d" data-aos="fade-left">
 					<div class="icon-img-conte">
 						<img src="images/pic01.jpg" alt="" class = "img-servi">
 					</div>
@@ -145,10 +145,10 @@
 			<div id="filosofia" class = "divi">
 				<i class="fa-solid fa-minus"></i>
 			</div>
-			<section class = "section-conte">
+			<section class = "section-conte" data-aos="fade-up" data-aos-anchor-placement="top-center">
 				<h2>Nuestra filosofía</h2>
 				<p class = "nosotros-text">Pensamos que implementar energías renovables es el camino para la regeneración del planeta tierra. Es por ello que ayudamos a personas como tú a través de la energía solar para la generación de energías limpias, teniendo un impacto ecológico, económico y sustentable.</p>
-				<div class = "MVV">
+				<div class = "MVV" data-aos="fade-up" data-aos-anchor-placement="top-center">
 					<div class ="MVV-conte">
 						<div class ="icon-img-conte">
 							<img src="/images/icon/mission.png" alt="mission" class="icon-img">
@@ -181,21 +181,47 @@
 				</div>
 			</section>
 		</div>
-	
 		<!-- Footer -->
-
 		<footer>
-			
+			<section id ="contacto">
+				<h2>Contactanos</h2>
+				<div class ="footer-form" data-aos="zoom-in-left">
+					<img class = "img-footer" src="images/Sun-energy-ecopoint.png" alt="">
+					<div class = "footer-form-email-social">
+						<form  class = "formulario" action="https://formsubmit.co/contacto@ecopoint.mx" method="POST">
+							<div class="inputs-email">
+								<div><input type="text" name="name" id="name" placeholder="Nombre" /></div>
+								<div><input type="email" name="email" id="email" placeholder="Correo" /></div>
+								<div><textarea name="message" id="message" placeholder="Mensaje" rows="4"></textarea></div>
+								<input class = "button btnsend" type="submit" value = "Enviar Mensaje">
+								<input type="hidden" name="_captcha" value="false">
+								<input type="hidden" name="_next" value="https://ecopoint-orion.netlify.app">
+							</div>
+						</form>
+						<div class = "social-links-ecopoint">
+							<a href="https://bit.ly/facebook-ecopoint"><i class="fa-brands fa-facebook-f"></i></i></a>
+							<a href="https://bit.ly/twitter-ecopoint"><i class="fa-brands fa-twitter"></i></a>
+							<a href="https://bit.ly/tiktok-ecopoint"><i class="fa-brands fa-tiktok"></i></a>
+							<a href="https://bit.ly/Instagram-ecopoint"><i class="fa-brands fa-instagram"></i></a>
+							<a href="https://bit.ly/pinteres-ecopoint"><i class="fa-brands fa-pinterest"></i></a>
+							<a href="https://bit.ly/linkedin-ecopoint"><i class="fa-brands fa-linkedin-in"></i></a>
+							<a href="https://bit.ly/Whatsapp-ecopoint"><i class="fa-brands fa-whatsapp"></i></a>
+							<a href="https://bit.ly/youtube-ecopoint"><i class="fa-brands fa-youtube"></i></a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</footer>
-		<!-- Scripts -->
-		<script type="text/javascript">
-			window.addEventListener("scroll", function()
-			{
-				var header = document.querySelector("header");
-				header.classList.toggle("sticky", window.pageYOffset > 0);
-			}
-			)
-		</script>
+		<script src = "assets/js/main.js"></script>
 		<script src="https://kit.fontawesome.com/5f286d029f.js" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init(
+				{
+					duration: 1000,
+					offset: 120
+				}
+			);
+		</script>
 	</body>
 </html>

@@ -15,6 +15,9 @@
     --four:rgb(4 212 4);
     --five: rgb(0 0 0 /.7);
     --six:rgb(4 212 4 /.6);
+    --seven: #0E4BEF;
+    --gradient-45: linear-gradient(45deg, rgb(4 212 4), #0E4BEF);
+    --gradient-0: background-image: linear-gradient(to right rgb(4 212 4), #00C2CB, #0E4BEF);
     --black-text:rgb(61, 61, 61);
     --white-text:#fff;
   }
@@ -29,12 +32,49 @@
     list-style: none;
     text-decoration: none;
 }
+
+
+body{
+  background: var(--background-black);
+  min-height: 100vh;
+}
+
+/* Main */
+.main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--background-white);
+}
+
+.main h2{
+  font-size: 30px;
+  color:var(--tertiary)
+}
+
+.main h3{
+  font-size: 25px;
+  color:var(--four)
+}
+
+
+/*Footer*/
+footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: var(--gradient-45);
+}
+
 .divi{
   font-size: 20px;
 }
 
 section{
-  width: 75%;
+  width: 85%;
   margin: 2rem auto;
   text-align: justify;
 }
@@ -45,22 +85,6 @@ section h3{
   margin: 1.5rem;
 }
 
-
-ul li{
-  list-style-type: circle;
-  list-style-position: inside;
-  padding: 0;
-}
-
-.icon-img{
-  margin-top: 2rem;
-  width: 40px;
-  height: 40px;
-}
-
-.icon-img-conte{
-  text-align: center;
-}
 
 /* ScrollBar */
 body::-webkit-scrollbar{
@@ -75,30 +99,21 @@ body::-webkit-scrollbar-thumb:hover{
     background-color: #918c77;
 }
 
-
-body{
-    background: var(--background-black);
-    min-height: 100vh;
+/*Elemetos*/
+  ul li{
+    list-style-type: circle;
+    list-style-position: inside;
+    padding: 0;
   }
-
-  /* Main */
-  .main{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: var(--background-white);
+  
+  .icon-img{
+    margin-top: 2rem;
+    width: 40px;
+    height: 40px;
   }
-
-  .main h2{
-    font-size: 30px;
-    color:var(--tertiary)
-  }
-
-  .main h3{
-    font-size: 25px;
-    color:var(--four)
+  
+  .icon-img-conte{
+    text-align: center;
   }
   
 /* Navbar */
@@ -294,6 +309,10 @@ display: flex;
 .servi{
   display: flex;
   margin: 3rem;
+  padding: 10px;/*
+  border: 2px solid ;
+  border-radius: 50px;*/
+ /* box-shadow: 0 .8rem 1rem rgba(0,0,0.2);*/
 }
 
 .servi-info{
@@ -303,7 +322,6 @@ display: flex;
   text-align: left;
   padding: 0;
   margin: 0;
-  border-bottom: 2px solid var(--iden3);
 }
 
   .img-servi{
@@ -311,7 +329,7 @@ display: flex;
     height: 250px;
     background-repeat: no-repeat;
     border-radius: 50%;
-    box-shadow: 0 .8rem 1rem rgba(0,0,0.2);
+    box-shadow: 0 .8rem 2rem rgba(0,0,0.2);
   }
 
   .button a{
@@ -329,7 +347,7 @@ display: flex;
     width: 190px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 1rem auto; /*Papi*/
+    margin: 1rem auto; 
   }
 
   .button span {
@@ -387,7 +405,68 @@ display: flex;
     margin-top: .5rem;
   }
 
-  /*media query*/
+  /*Footer*/
+#contacto h2{
+  padding: 1rem;
+  margin:5rem;
+  color: var(--white-text);
+  font-size: 40px;
+}
+.img-footer{
+  margin: 2rem 0;
+  padding: 0;
+  width: 620px;
+  height: 374px;
+}
+
+.footer-form{
+  display: flex;
+}
+
+.footer-form-email-social{
+  margin: 0 auto;
+  width: 40%;
+}
+.formulario{
+  background: var(--primary);
+  padding: 1rem;
+  border-radius: 1rem;
+ /* box-shadow: 8px 10px 25px var(--background-black);*/
+}
+.inputs-email{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.inputs-email div input,
+.inputs-email div textarea,
+.btnsend{
+  width: 100%;
+  margin: 1rem 0rem;
+  padding: 7px;
+  border-radius:10px;
+}
+
+.btnsend:hover{
+  color: var(--white-text);
+  background-color: var(--five);
+}
+
+.social-links-ecopoint{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.social-links-ecopoint a{
+  font-size: 20px;
+  color: var(--white-text);
+  transition: 0.5s;
+}
+.social-links-ecopoint a:hover{
+  color: var(--black-text);
+}
+
+/*media query*/
   
   @media (max-width:1039px) {
 
@@ -478,10 +557,13 @@ display: flex;
 .servi{
   flex-direction: column;
   align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  width: 85%;
 }
 
 .servi-info{
-  margin-top: 20px;
+  margin:20px 0;
   width: 100%;
 }
 .servi-info h3{
@@ -495,8 +577,24 @@ display: flex;
 
     .MVV-conte{
       width: 100%;
+      margin: 0;
     }
     .MVV-conte-li{
       width: 100%;
+      margin: 0;
+    }
+
+    /*footer*/
+    .footer-form{
+      flex-direction: column;
+    }
+    .img-footer{
+      display: none;
+    }
+    .footer-form-email-social{
+      width: 85%;
+    }
+    #contacto h2{
+      margin: .5rem 0;
     }
   }
