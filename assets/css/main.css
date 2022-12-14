@@ -16,8 +16,8 @@
     --five: rgb(0 0 0 /.7);
     --six:rgb(4 212 4 /.6);
     --seven: #0E4BEF;
+    --eight:rgba(14 75 239 /.8);
     --gradient-45: linear-gradient(45deg, rgb(4 212 4), #0E4BEF);
-    --gradient-0: background-image: linear-gradient(to right rgb(4 212 4), #00C2CB, #0E4BEF);
     --black-text:rgb(61, 61, 61);
     --white-text:#fff;
   }
@@ -31,6 +31,50 @@
     border: none;
     list-style: none;
     text-decoration: none;
+}
+
+/*Boton*/
+.button a{
+  text-decoration: none;
+  color:var(--black-text);
+}
+.button {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: var(--tertiary);
+  border: none;
+  text-align: center;
+  font-size: 17px;
+  padding: 5px;
+  width: 190px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 1rem auto; 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 
@@ -65,7 +109,7 @@ footer{
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: var(--gradient-45);
 }
 
@@ -297,6 +341,12 @@ display: flex;
     text-align: right;
     border-right: 4px solid rgba(255 255 255 /.5);
   }
+  .cotiza-servicio{
+    background-color: var(--four);
+  }
+  .cotiza-servicio:hover{
+    background-color: var(--tertiary);
+  }
   
 /*Servicios*/
 #servicios p{
@@ -328,53 +378,11 @@ display: flex;
   .img-servi{
     width: 250px;
     height: 250px;
-    background-repeat: no-repeat;
     border-radius: 50%;
-    box-shadow: 0 .8rem 2rem rgba(0,0,0.2);
+    box-shadow: 0 .8rem 2rem rgba(0 0 0 /.7);
   }
 
-  .button a{
-    text-decoration: none;
-    color:var(--black-text);
-  }
-  .button {
-    display: inline-block;
-    border-radius: 8px;
-    background-color: var(--tertiary);
-    border: none;
-    text-align: center;
-    font-size: 17px;
-    padding: 5px;
-    width: 190px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 1rem auto; 
-  }
-
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-
-  .button:hover span {
-    padding-right: 25px;
-  }
-
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+  
 
   /*Filosofia*/
   .nosotros-text{
@@ -406,6 +414,44 @@ display: flex;
     margin-top: .5rem;
   }
 
+/*Beneficios*/
+
+#beneficios{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.beneficios-ecopoint{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.beneficios-ecopoint img{
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin: 1.5rem;
+}
+
+#beneficios p{
+  font-size: 15px;
+  text-align: justify;
+}
+
+.puntos-beneficios{
+  margin: 1rem;
+  height: 45%;
+  text-align: center;
+}
+.puntos-beneficios i{
+  font-size: 50px;
+  color: var(--seven);
+}
+
   /*Footer*/
 #contacto h2{
   padding: 1rem;
@@ -423,6 +469,7 @@ display: flex;
 
 .footer-form{
   display: flex;
+  align-items:center;
 }
 
 .footer-form-email-social{
@@ -612,7 +659,7 @@ display: flex;
       width: 85%;
     }
     #contacto h2{
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
     .copyrights{
       margin-top: 3rem;
@@ -624,11 +671,16 @@ display: flex;
       margin: 0;
       padding: 0;
       display: flex;
-      flex-direction: column;
+      justify-content: space-around;
+      flex-direction: row;
     }
 
     .info-ecopoint p{
       text-align: left;
-      margin: 10px 0;
+      margin: 10px 10px;
     }
+
+      .ubi{
+        display: none;
+      }
   }
