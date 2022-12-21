@@ -77,6 +77,11 @@
   right: 0;
 }
 
+.ener-reno{
+  width: 250px;
+  background-color: var(--primary);
+}
+
 
 body{
   background: var(--background-black);
@@ -248,11 +253,12 @@ color: var(--white-text);
 .drop-down-menu-content{
 display: none;
 position: absolute;
-background-color: var(--secondary);
+background-color: var(--five);
 min-width: 10rem;
 box-shadow: 0 .8rem 1rem rgba(0,0,0.2);
 z-index: 1;
 }
+
 
 .drop-down-menu:hover{
 background-color: var(--primary);
@@ -615,7 +621,9 @@ display: flex;
       border-bottom: 4px solid rgba(255 255 255 /.5);
       border-right: 0;
     }
-
+    .ener-reno a{
+      color: var(--white-text);
+    }
 /*Servicios*/
 
 .servi{
@@ -634,6 +642,10 @@ display: flex;
   text-align: center;
 }
 
+.servi-info .button{
+  width: 100%;
+}
+
 /*Filosofia*/
     .MVV{
       flex-direction: column;
@@ -646,6 +658,24 @@ display: flex;
     .MVV-conte-li{
       width: 100%;
       margin: 0;
+    }
+
+    #beneficios{
+      flex-direction: column;
+      height: 200vh;
+      width: 85%;
+    }
+    .Garantia-Asesoria{
+      order: 2;
+    }
+    .Monitoreo-Ahorro{
+      order: 3;
+    }
+    .beneficios-ecopoint img{
+      order: 0;
+      width: 250px;
+      height: 250px;
+      margin: 1rem auto;
     }
 
     /*footer*/
@@ -668,19 +698,14 @@ display: flex;
 
     .info-ecopoint{
       width: 90%;
-      margin: 0;
+      margin: 10px;
       padding: 0;
       display: flex;
-      justify-content: space-around;
-      flex-direction: row;
+      flex-direction: column;
     }
-
     .info-ecopoint p{
-      text-align: left;
-      margin: 10px 10px;
+      margin: 10px;
     }
 
-      .ubi{
-        display: none;
-      }
+      
   }
