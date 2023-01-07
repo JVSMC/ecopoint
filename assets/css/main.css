@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@100;300&display=swap');
 @import url("fontawesome-all.min.css");
+
+@font-face {
+  font-family: Lovelo;
+  src: url(assets/fonts/Lovelo-Black.woff) format ('woff');
+}
 
 :root{    
     --iden:yellow;
@@ -27,10 +31,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arimo', sans-serif;
     border: none;
     list-style: none;
     text-decoration: none;
+}
+
+h1{
+  font-family: 'Lovelo';
+}
+
+h2, h3 {
+  font-family: 'Arimo', sans-serif;
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
+}
+
+article{
+  display: flex;
+}
+article div {
+  margin: 1rem;
+}
+
+article p{
+  margin-top: .5rem;
+}
+
+#float-button {
+  position: fixed; /* Fija la posición del botón */
+  bottom: 40px; /* Posición desde el borde inferior de la pantalla */
+  right: 40px; /* Posición desde el borde derecho de la pantalla */
+  background-color: #25D366; /* Color de fondo */
+  color: white; /* Color del texto */
+  border-radius: 50%; /* Redondear los bordes */
+  text-align: center; /* Alinear el texto al centro */
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.5); /* Sombra */
+  z-index: 10;
+  animation: sizechange 1s infinite;
+}
+
+@keyframes sizechange {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+#float-button a {
+  display: block; /* Muestra el botón como bloque */
+  width: 60px; /* Ancho del botón */
+  height: 60px; /* Alto del botón */
+  line-height: 60px; /* Altura de línea para centrar el ícono */
+  font-size: 30px; /* Tamaño del ícono */
+  color: var(--white-text);
 }
 
 /*Boton*/
@@ -113,8 +168,9 @@ body{
 footer{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: var(--gradient-45);
 }
 
@@ -133,7 +189,6 @@ section h3{
   text-align: center;
   margin: 1.5rem;
 }
-
 
 /* ScrollBar */
 body::-webkit-scrollbar{
@@ -156,9 +211,8 @@ body::-webkit-scrollbar-thumb:hover{
   }
   
   .icon-img{
-    margin-top: 2rem;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
   }
   
   .icon-img-conte{
@@ -325,7 +379,7 @@ display: flex;
     position:absolute;
     content:"";
     inset: 0;
-    background:url(/images/bkgfull/ecopoint.mx\ \ Propuesta\ George.png);
+    background:url(/images/bkgfull/ecopoint.mx\ \ paneles\ solares\ guadalajara\ méxico.png);
     background-size: cover;
     filter:blur(5px) brightness(70%) saturate(90%);
   }
@@ -354,10 +408,24 @@ display: flex;
     background-color: var(--tertiary);
   }
   
+  .ener-reno a{
+    color: var(--white-text);
+  }
+
+  .options-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .options-button button{
+    margin:0 1rem;
+  }
+
 /*Servicios*/
-#servicios p{
-  font-family: "IBM Plex Sans", Helvetica, sans-serif;
-}
+/*#servicios p{
+  font-family: 'Raleway', sans-serif;
+}*/
 
 .d{
   flex-direction: row-reverse;
@@ -391,34 +459,50 @@ display: flex;
   
 
   /*Filosofia*/
-  .nosotros-text{
-    line-height: 45px;
-    margin-bottom: 3rem;
-  }
-
   .main p,
   .main ul{
     font-size: 20px;
   }
 
-  .MVV{
-    display: flex;
-    margin-top: 1rem;
-    border-top: 3px solid var(--tertiary);
+  .section-conte{
+    height: 100vh;
   }
 
-  .MVV-conte{
-    width: 37%;
-    margin:0 1rem;
-    line-height:40px;
+  .filosofia,
+  .target {
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
   }
-  .MVV-conte-li{
-    margin:0 1rem;
-    line-height:40px;
+
+  .target{
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1rem;
+    margin: 1rem;
   }
-  .section-conte h3{
-    margin-top: .5rem;
+
+
+  .mision-vision-valores-I{
+    width: 55%;
+    margin-right: 1rem;
   }
+
+  .mision-vision-valores-D{
+    width: 40%;
+    margin-left: 1rem;
+  }
+
+  .mision-vision-valores-D img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .img-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
 /*Beneficios*/
 
@@ -621,9 +705,16 @@ display: flex;
       border-bottom: 4px solid rgba(255 255 255 /.5);
       border-right: 0;
     }
-    .ener-reno a{
-      color: var(--white-text);
+
+    .options-button{
+      flex-direction: column;
+      align-items: center;
     }
+
+    .options-button .button{
+      margin: 10px;
+    }
+
 /*Servicios*/
 
 .servi{
@@ -647,17 +738,24 @@ display: flex;
 }
 
 /*Filosofia*/
-    .MVV{
+    .filosofia{
       flex-direction: column;
+      height: 200%;
     }
 
-    .MVV-conte{
-      width: 100%;
+    .mision-vision-valores-D,
+    .mision-vision-valores-I{
+      width: 85%;
       margin: 0;
     }
-    .MVV-conte-li{
-      width: 100%;
-      margin: 0;
+
+    .mision-vision-valores-I{
+      order: 2;
+    }
+
+    .target{
+      margin: 1rem 0;
+      flex-direction: column;
     }
 
     #beneficios{
@@ -692,8 +790,8 @@ display: flex;
       margin-top: 4rem;
     }
     .copyrights{
-      margin-top: 3rem;
-      margin-bottom: 0rem;
+      margin-top: .5rem;
+      text-align: left;
     }
 
     .info-ecopoint{
